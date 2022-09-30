@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{margin: 0;
+        padding: 0;}
+        ul, li{list-style: none;}
+        a{text-decoration: none;}
+        
+
+
+            .section input[id="slide01"] :checked ~ .slideWrap .slideList > li{
+                transform: translateX(0%);
+            }
+
+            .section input[id="slide02"] :checked ~ .slideWrap .slideList > li{
+                transform: translateX(-100%);
+            }
+
+            .section input[id="slide03"] :checked ~ .slideWrap .slideList > li{
+                transform: translateX(-200%);
+            }
+
+
+            .section .slideWrap{
+                max-width: 1050px;
+                overflow: hidden;
+            }
+
+            .slideWrap .slideList{
+                white-space: nowrap;
+                font-size: 0;
+            }
+
+    .section .slideList > li {display:inline-block;vertical-align:middle;width:100%;transition:all .5s;}
+	.section .slideList > li > a {display:block;position:relative;}
+	.section .slideList > li > a img {width:100%;}
+
+    </style>
+
+
+</head>
+<body>
+
+    <div class ="section">
+        <input type ="radio" name = "slide" id="slide01" checked>
+        <input type ="radio" name = "slide" id="slide02">
+        <input type ="radio" name = "slide" id="slide03">
+
+
+        <div class ="slideWrap">
+            <ul class="slideList">
+                <li>
+                    <a><img src="./rigoletto.jpg"></a>
+                </li>
+                <li>
+                    <a><img src="sleepingbt.jpg"></a>
+                </li>
+                <li>
+                    <a><img src="./nabucco.jpg"></a>
+                </li>
+            </ul>
+        </div>
+        
+    </div>
+
+
+</body>
+</html>
